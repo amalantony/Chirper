@@ -5,7 +5,7 @@ var actions = require('../actions');
 var ChirpList = require('./ChirpList');
 var ChirpStore = require('../stores/chirps.js');
 
-var Home = module.exports = React.createClass({
+var Home = React.createClass({
 	getInitialState: function() {
 		return {
 			chirps: ChirpStore.all()
@@ -30,3 +30,5 @@ var Home = module.exports = React.createClass({
 		actions.chirp(text);
 	}
 });
+
+module.exports = Home;

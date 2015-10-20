@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 var assign = require('object-assign');
 var EventEmitterProto = require('events').EventEmitter.prototype;
 var CHANGE_EVENT = "CHANGE";
@@ -14,8 +14,6 @@ var storeMethods = {
     arr.filter(function(item) {
       return currIds.indexOf(item.cid) === -1;
     }).forEach(this.add.bind(this));
-
-    console.log('Data Set', this._data);
   },
   add: function(item) {
     this._data.push(item);

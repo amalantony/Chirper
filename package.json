@@ -23,6 +23,7 @@
     "express-session": "^1.11.3",
     "flux": "^2.1.1",
     "locallydb": "0.0.9",
+    "moment": "^2.10.6",
     "object-assign": "^3.0.0",
     "passport": "^0.3.0",
     "passport-local": "^1.0.0"
