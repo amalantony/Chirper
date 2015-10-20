@@ -102,6 +102,10 @@ function makeUserSafe(user) {
   return safeUser;
 }
 
+router.get('/api/users', function(req, res) {
+  res.json(users.toArray().map(makeUserSafe));
+});
+
 exports.routes = router;
 exports.required = loginRequired;
 exports.safe = makeUserSafe;

@@ -11,6 +11,7 @@ var routes = (<Route handler={require('./components/App')}>
 </Route>);
 
 API.fetchChirps();
+API.fetchUsers();
 
 ReactRouter.run(routes, ReactRouter.HistoryLocation, function(Root) {
   React.render(<Root/>, document.getElementById('app'));
