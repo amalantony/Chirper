@@ -16,7 +16,7 @@ router.route('/api/chirps')
     //TO BE REMOVED
     chirp.username = req.user.username;
     chirp.fullname = req.user.fullname;
-    chirp.email     = req.user.email;
+    chirp.email    = req.user.email;
 
     var id = chirps.insert(chirp);
     res.json(chirps.get(id));
