@@ -50,7 +50,7 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/signup', function(req, res, next) {
-  if(users.where({ username: req.body.username }).items.length == 0) {
+  if(users.where({ username: req.body.username }).items.length === 0) {
     //no user
     var user = {
       fullname: req.body.fullname,

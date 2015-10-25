@@ -1,11 +1,18 @@
 "use strict";
 var React = require('react');
-var ChirpBox = require('./ChirpBox');
+var Box = require('./ChirpBox');
+var moment = require('moment');
+
+var UserStore = require('../stores/users');
 
 var ChirpList = React.createClass({
 	render: function() {
 		var items = this.props.chirps.map(function(chirp) {
-			return (<ChirpBox key={chirp.cid} chirp={chirp} />);
+			return (<Box key={chirp.cid}
+									 user={chirp}
+									 timestamp={moment(chirp.$created).fromNow()}>
+				{chirp.text}
+			</Box>);
 		});
 		return <ul> {items} </ul>;
 	}
