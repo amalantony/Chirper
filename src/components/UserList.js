@@ -6,6 +6,7 @@ var actions = require('../actions');
 var Link = require('react-router').Link;
 var Box = require('./ChirpBox');
 
+var FollowButton = require('./FollowButton');
 
 var UserList = React.createClass({
 	getInitialState: function() {
@@ -28,7 +29,7 @@ var UserList = React.createClass({
 			return this.state.user.cid !== user.cid;
 		}.bind(this)).map(function(user) {
 			return <Box user={user} key={user.cid}>
-				Follow Buttons
+				<FollowButton userId={user.cid}></FollowButton>
 			</Box>;
 		});
 

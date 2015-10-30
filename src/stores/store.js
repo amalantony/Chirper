@@ -22,7 +22,7 @@ var storeMethods = {
     return this._data;
   },
   get: function(id) {
-    this._data.filter(function(item) {
+    return this._data.filter(function(item) {
       return item.cid === id;
     })[0];
   },
