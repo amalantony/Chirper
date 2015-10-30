@@ -1,8 +1,9 @@
 "use strict";
 var React = require('react');
 var RouteHandler = require('react-router').RouteHandler;
+var Navigation = require('./Navigation');
 
-var App = module.exports = React.createClass({
+var App = React.createClass({
 	render: function() {
 		return (<div>
 			<div className="row">
@@ -11,7 +12,7 @@ var App = module.exports = React.createClass({
 
 			<div className="row">
 				<div className="three columns">
-					Navigation
+					<Navigation></Navigation>
 				</div>
 				<div className="nine columns">
 					<RouteHandler/>
@@ -21,3 +22,5 @@ var App = module.exports = React.createClass({
 		</div>);
 	}
 });
+
+module.exports = App;
