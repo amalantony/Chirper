@@ -8,7 +8,7 @@ var ChirpStore = require('../stores/chirps.js');
 var Home = React.createClass({
 	getInitialState: function() {
 		return {
-			chirps: ChirpStore.all()
+			chirps: ChirpStore.timeline()
 		};
 	},
 	componentDidMount: function() {
