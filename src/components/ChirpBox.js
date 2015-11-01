@@ -11,9 +11,10 @@ var ChirpBox = React.createClass({
 			' ' + String.fromCharCode(8226) + ' ' + this.props.timestamp :
 			'';
 
+		var id = (typeof user.userId === 'number') ? user.userId : user.cid;
 		return(
 			<li className="row chirp">
-				<Link to="user" className="two columns" params={ {id: user.userId || user.cid} }>
+				<Link to="user" className="two columns" params={ {id: id} }>
 					<img src={utils.avatar(user.email)} />
 				</Link>
 				<div className="ten columns">

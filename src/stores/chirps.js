@@ -11,6 +11,11 @@ var ChirpStore = require('./store').extend({
 		return this._data.filter(function(chirp) {
 			return ids.indexOf(chirp.userId) > -1;
 		});
+	},
+	byUserId: function(id) {
+		return this._data.filter(function(chirp) {
+			return chirp.userId === id;
+		});
 	}
 });
 
