@@ -32,6 +32,14 @@ var API = module.exports = {
 	fetchUsers: function() {
 		get('/api/users').then(actions.gotUsers.bind(actions));
 	},
+	startFecthingChrips: function() {
+		this.fetchChirps();
+		setInterval(this.fetchChirps, 1000);
+	},
+	startFetchingUsers: function() {
+		this.fetchUsers();
+		setInterval(this.fetchUsers, 5000);
+	},
 	saveChirp: function(text) {
 		console.log('Save Chirp!');
 		text = text.trim();
