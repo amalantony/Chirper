@@ -13,3 +13,5 @@ express()
     });
   })
   .listen(4000);
+
+console.log("Listening on localhost:4000");
