@@ -10,12 +10,7 @@ var FollowButton = React.createClass({
 				currentlyFollowing: UserStore.currentUser.following
 			};
 		},
-		componentDidMount: function() {
-			UserStore.addChangeListener(this.onChange);
-		},
-		componentWillUnmount: function() {
-			UserStore.removeChangeListener(this.onChange);
-		},
+		mixins: [UserStore.mixin],	
 		onChange: function() {
 			this.setState(this.getInitialState());
 		},

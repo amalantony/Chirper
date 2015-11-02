@@ -11,6 +11,7 @@ var Home = React.createClass({
 			chirps: ChirpStore.timeline()
 		};
 	},
+	mixins: [ChirpStore.mixin],
 	componentDidMount: function() {
 		ChirpStore.addChangeListener(this.onChange);
 	},
